@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sona Premson – Accountant & Digital Marketing Executive</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0d1b2a;
+  --navy2:#1a2d42;
+  --accent:#7c3aed;
+  --accent2:#6d28d9;
+  --accentlt:#ede9fe;
+  --accentmd:#c4b5fd;
+  --teal:#0f766e;
+  --teallt:#ccfbf1;
+  --light:#f8f7ff;
+  --muted:#64748b;
+  --border:#e5e7eb;
+  --white:#ffffff;
+}
+body{font-family:'Inter',sans-serif;background:var(--white);color:var(--navy);line-height:1.6}
+
+nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;border-bottom:1px solid var(--border);background:var(--white);position:sticky;top:0;z-index:100}
+.logo{font-size:18px;font-weight:600;letter-spacing:-0.3px}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:1.75rem}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:6px;font-size:13px;font-weight:500;cursor:pointer;text-decoration:none;border:none;transition:all 0.2s;font-family:'Inter',sans-serif}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent2)}
+.btn-ghost{background:transparent;color:var(--accentmd);border:1.5px solid rgba(196,181,253,0.4)}
+.btn-ghost:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* Hero */
+.hero{background:var(--navy);padding:5rem 2.5rem;display:flex;align-items:center;gap:3rem;flex-wrap:wrap}
+.hero-left{flex:1;min-width:280px}
+.hero-eyebrow{font-size:12px;color:var(--accentmd);font-weight:500;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.75rem}
+.hero h1{font-size:40px;font-weight:600;color:#fff;line-height:1.15;letter-spacing:-1.5px;margin-bottom:0.85rem}
+.hero h1 em{font-style:normal;color:var(--accentmd)}
+.hero-sub{font-size:15px;color:#94a3b8;max-width:480px;line-height:1.8;margin-bottom:2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-right{flex:0 0 290px;display:flex;flex-direction:column;gap:10px}
+.hcard{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:10px;padding:0.9rem 1.1rem;display:flex;align-items:center;gap:12px}
+.hicon{width:38px;height:38px;background:rgba(124,58,237,0.25);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accentmd);font-size:19px;flex-shrink:0}
+.hcard .num{font-size:18px;font-weight:600;color:#fff}
+.hcard .lbl{font-size:12px;color:#94a3b8}
+
+/* Dual role badges */
+.dual-roles{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1.5rem}
+.role-badge{display:flex;align-items:center;gap:7px;padding:7px 14px;border-radius:8px;font-size:13px;font-weight:500}
+.role-finance{background:rgba(15,118,110,0.2);color:#5eead4;border:1px solid rgba(94,234,212,0.2)}
+.role-marketing{background:rgba(124,58,237,0.2);color:var(--accentmd);border:1px solid rgba(196,181,253,0.2)}
+
+/* Sections */
+.section{padding:4rem 2.5rem}
+.sec-eyebrow{font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:0.4rem}
+.sec-title{font-size:27px;font-weight:600;color:var(--navy);letter-spacing:-0.5px;margin-bottom:0.4rem}
+.bar{width:36px;height:3px;background:var(--accent);border-radius:2px;margin:0.6rem 0 2.5rem}
+
+/* Skills split */
+.skills-bg{background:var(--light)}
+.skills-split{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.skill-col-head{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;padding-bottom:0.75rem;border-bottom:2px solid}
+.skill-col-head.finance{border-color:var(--teal)}
+.skill-col-head.marketing{border-color:var(--accent)}
+.skill-col-head i{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.skill-col-head.finance i{background:var(--teallt);color:var(--teal)}
+.skill-col-head.marketing i{background:var(--accentlt);color:var(--accent)}
+.skill-col-head span{font-size:15px;font-weight:600}
+.skills-cols{display:flex;flex-direction:column;gap:1rem}
+.skill-group{background:var(--white);border-radius:10px;padding:1.25rem;border:1px solid var(--border)}
+.skill-group h4{font-size:13px;font-weight:600;margin-bottom:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:12px;padding:3px 9px;border-radius:4px}
+.tag-purple{background:var(--accentlt);color:var(--accent2);border:1px solid rgba(124,58,237,0.15)}
+.tag-teal{background:var(--teallt);color:var(--teal);border:1px solid rgba(15,118,110,0.2)}
+.tag-gray{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0}
+
+/* Services */
+.svc-tabs{display:flex;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:2rem;width:fit-content}
+.svc-tab{padding:8px 20px;font-size:13px;font-weight:500;cursor:pointer;background:var(--white);color:var(--muted);border:none;font-family:'Inter',sans-serif;transition:all 0.2s}
+.svc-tab.active-marketing{background:var(--accent);color:#fff}
+.svc-tab.active-finance{background:var(--teal);color:#fff}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:1rem}
+.svc{border:1px solid var(--border);border-radius:12px;padding:1.4rem;background:var(--white);transition:border-color 0.2s}
+.svc:hover{border-color:var(--accent)}
+.svc.teal:hover{border-color:var(--teal)}
+.svc.featured{border:2px solid var(--accent)}
+.svc.featured-teal{border:2px solid var(--teal)}
+.svc-ic{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:0.9rem}
+.svc-ic.purple{background:var(--accentlt);color:var(--accent)}
+.svc-ic.teal{background:var(--teallt);color:var(--teal)}
+.svc h4{font-size:14px;font-weight:600;margin-bottom:0.4rem}
+.svc p{font-size:13px;color:var(--muted);line-height:1.6}
+.popular-badge{display:inline-block;font-size:11px;padding:2px 9px;border-radius:20px;margin-bottom:0.5rem;font-weight:500}
+.badge-purple{background:var(--accentlt);color:var(--accent)}
+.badge-teal{background:var(--teallt);color:var(--teal)}
+.svc-section{display:none}
+.svc-section.active{display:block}
+
+/* Experience */
+.exp-bg{background:var(--light)}
+.timeline{display:flex;flex-direction:column;gap:1.25rem}
+.exp-card{background:var(--white);border-radius:12px;padding:1.75rem;border:1px solid var(--border)}
+.exp-card.exp-current{border-left:3px solid var(--accent)}
+.exp-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}
+.exp-top h4{font-size:16px;font-weight:600}
+.exp-top .company{font-size:13px;color:var(--accent);margin-top:3px;font-weight:500}
+.exp-date{font-size:12px;background:var(--accentlt);color:var(--accent2);padding:4px 12px;border-radius:20px;white-space:nowrap;align-self:flex-start;font-weight:500}
+.exp-date.teal-date{background:var(--teallt);color:var(--teal)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.exp-bullets{display:flex;flex-direction:column;gap:7px;list-style:none}
+.exp-bullets li{font-size:13px;color:var(--muted);display:flex;align-items:flex-start;gap:8px;line-height:1.55}
+.exp-bullets li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);margin-top:6px;flex-shrink:0}
+.exp-bullets.teal-bullets li::before{background:var(--teal)}
+.exp-tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:0.85rem}
+
+/* Education */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem}
+.edu-dark{background:var(--navy);border-radius:12px;padding:1.75rem;color:#fff}
+.edu-light{background:var(--accentlt);border-radius:12px;padding:1.75rem;border:1px solid rgba(124,58,237,0.2)}
+.edu-teal{background:var(--teallt);border-radius:12px;padding:1.75rem;border:1px solid rgba(15,118,110,0.2)}
+.edu-icon{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:1rem}
+
+/* Contact */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:2rem}
+.contact-cards{display:flex;flex-direction:column;gap:1rem}
+.cc{display:flex;align-items:center;gap:12px;padding:1rem 1.25rem;background:var(--white);border-radius:10px;border:1px solid var(--border)}
+.ccic{width:38px;height:38px;background:var(--accentlt);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:18px;flex-shrink:0}
+.cc .lbl{font-size:11px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.8px}
+.cc .val{font-size:14px;color:var(--navy);font-weight:500}
+.cform{background:var(--white);border-radius:12px;padding:1.75rem;border:1px solid var(--border)}
+.fg{display:flex;flex-direction:column;gap:6px;margin-bottom:1rem}
+.fg label{font-size:11px;font-weight:600;color:var(--navy);text-transform:uppercase;letter-spacing:0.8px}
+.fg input,.fg textarea,.fg select{padding:10px 12px;border:1px solid var(--border);border-radius:6px;font-size:14px;color:var(--navy);background:var(--white);font-family:'Inter',sans-serif;resize:vertical;transition:border-color 0.2s}
+.fg textarea{min-height:95px}
+.fg input:focus,.fg textarea:focus,.fg select:focus{outline:none;border-color:var(--accent)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.frow .fg{margin-bottom:0}
+
+footer{background:var(--navy);color:#64748b;text-align:center;padding:2.5rem;font-size:13px}
+footer a{color:var(--accentmd);text-decoration:none}
+footer a:hover{color:#fff}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.25rem}
+  .nav-links{display:none}
+  .hero{padding:3rem 1.25rem}
+  .hero h1{font-size:28px}
+  .hero-right{flex:1 1 100%}
+  .section{padding:3rem 1.25rem}
+  .two-col,.skills-split,.contact-wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+  <div class="logo">Sona<span>.</span>Premson</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#qualifications">Qualifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="btn btn-primary"><i class="ti ti-mail"></i> Hire Me</a>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="about">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Accountant &amp; Digital Marketing Executive</div>
+    <div class="dual-roles">
+      <span class="role-badge role-finance"><i class="ti ti-calculator" style="font-size:15px"></i>Finance &amp; Accounting</span>
+      <span class="role-badge role-marketing"><i class="ti ti-speakerphone" style="font-size:15px"></i>Digital Marketing</span>
+    </div>
+    <h1>Driven by Data —<br><em>Powered by Creativity</em></h1>
+    <p class="hero-sub">Hi, I'm Sona Premson — a detail-oriented professional skilled in TallyPrime, SAP, GST compliance, SEO, Meta Ads, and Google Analytics. I bring financial accuracy and data-driven marketing together to support real business growth.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn btn-primary"><i class="ti ti-briefcase"></i> View Services</a>
+      <a href="#contact" class="btn btn-ghost"><i class="ti ti-message"></i> Let's Talk</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hcard">
+      <div class="hicon"><i class="ti ti-trending-up"></i></div>
+      <div><div class="num">1+ Year</div><div class="lbl">Professional experience</div></div>
+    </div>
+    <div class="hcard">
+      <div class="hicon"><i class="ti ti-calculator"></i></div>
+      <div><div class="num">Tally &amp; SAP</div><div class="lbl">Accounting software</div></div>
+    </div>
+    <div class="hcard">
+      <div class="hicon"><i class="ti ti-search"></i></div>
+      <div><div class="num">SEO + Meta Ads</div><div class="lbl">Digital campaigns</div></div>
+    </div>
+    <div class="hcard">
+      <div class="hicon"><i class="ti ti-file-check"></i></div>
+      <div><div class="num">GST Compliant</div><div class="lbl">Tax &amp; statutory filing</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="section skills-bg" id="skills">
+  <div class="sec-eyebrow">Core Expertise</div>
+  <div class="sec-title">Skills &amp; tools</div>
+  <div class="bar"></div>
+  <div class="skills-split">
+
+    <!-- Accounting -->
+    <div>
+      <div class="skill-col-head finance">
+        <i class="ti ti-building-bank"></i>
+        <span>Accounting &amp; Finance</span>
+      </div>
+      <div class="skills-cols">
+        <div class="skill-group">
+          <h4>Software</h4>
+          <div class="tags">
+            <span class="tag tag-teal">TallyPrime</span>
+            <span class="tag tag-teal">SAP FICO</span>
+            <span class="tag tag-teal">QuickBooks</span>
+            <span class="tag tag-teal">Zoho Books</span>
+            <span class="tag tag-teal">ERP Software</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Accounting Operations</h4>
+          <div class="tags">
+            <span class="tag tag-teal">Journal Entries</span>
+            <span class="tag tag-teal">Ledger Reconciliation</span>
+            <span class="tag tag-teal">Accounts Payable</span>
+            <span class="tag tag-teal">Accounts Receivable</span>
+            <span class="tag tag-teal">Billing &amp; Invoicing</span>
+            <span class="tag tag-teal">Inventory Management</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Tax &amp; Compliance</h4>
+          <div class="tags">
+            <span class="tag tag-teal">GST Filing</span>
+            <span class="tag tag-teal">VAT Filing</span>
+            <span class="tag tag-teal">Statutory Compliance</span>
+            <span class="tag tag-teal">Outstanding Reports</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Digital Marketing -->
+    <div>
+      <div class="skill-col-head marketing">
+        <i class="ti ti-speakerphone"></i>
+        <span>Digital Marketing</span>
+      </div>
+      <div class="skills-cols">
+        <div class="skill-group">
+          <h4>SEO &amp; Content</h4>
+          <div class="tags">
+            <span class="tag tag-purple">On-Page SEO</span>
+            <span class="tag tag-purple">Off-Page SEO</span>
+            <span class="tag tag-purple">Keyword Research</span>
+            <span class="tag tag-purple">Content Marketing</span>
+            <span class="tag tag-purple">Content Optimisation</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Paid Advertising</h4>
+          <div class="tags">
+            <span class="tag tag-purple">Meta Ads</span>
+            <span class="tag tag-purple">Google Ads</span>
+            <span class="tag tag-purple">Facebook Ads</span>
+            <span class="tag tag-purple">Instagram Ads</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Analytics &amp; Social</h4>
+          <div class="tags">
+            <span class="tag tag-purple">Google Analytics GA4</span>
+            <span class="tag tag-purple">Social Media Marketing</span>
+            <span class="tag tag-purple">Facebook</span>
+            <span class="tag tag-purple">Instagram</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Tools -->
+  <div style="margin-top:1.5rem;background:var(--white);border-radius:10px;padding:1.25rem;border:1px solid var(--border)">
+    <h4 style="font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:0.75rem">Tools &amp; Software</h4>
+    <div class="tags">
+      <span class="tag tag-gray">MS Excel (Pivot Tables, VLOOKUP, HLOOKUP)</span>
+      <span class="tag tag-gray">MS Word</span>
+      <span class="tag tag-gray">MS PowerPoint</span>
+      <span class="tag tag-gray">ERP Software</span>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="sec-eyebrow">What I Offer</div>
+  <div class="sec-title">Services</div>
+  <div class="bar"></div>
+
+  <div class="svc-tabs">
+    <button class="svc-tab active-marketing" onclick="showTab('marketing',this,'active-marketing')">
+      <i class="ti ti-speakerphone" style="font-size:13px;vertical-align:-1px;margin-right:5px"></i>Digital Marketing
+    </button>
+    <button class="svc-tab" onclick="showTab('finance',this,'active-finance')">
+      <i class="ti ti-building-bank" style="font-size:13px;vertical-align:-1px;margin-right:5px"></i>Accounting &amp; Finance
+    </button>
+  </div>
+
+  <!-- Marketing Services -->
+  <div id="tab-marketing" class="svc-section active">
+    <div class="svc-grid">
+      <div class="svc featured">
+        <div class="popular-badge badge-purple">Most requested</div>
+        <div class="svc-ic purple"><i class="ti ti-search"></i></div>
+        <h4>SEO Optimisation</h4>
+        <p>Full on-page and off-page SEO — keyword research, meta tags, link building, and content strategy to improve search rankings.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ic purple"><i class="ti ti-ad-2"></i></div>
+        <h4>Meta Ads Management</h4>
+        <p>Facebook and Instagram ad campaigns — audience targeting, A/B testing, and performance optimisation.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ic purple"><i class="ti ti-brand-google"></i></div>
+        <h4>Google Ads</h4>
+        <p>Search and display campaigns to drive qualified traffic and maximise return on ad spend.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ic purple"><i class="ti ti-brand-instagram"></i></div>
+        <h4>Social Media Marketing</h4>
+        <p>Page management, content planning, and growing organic presence on Facebook and Instagram.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ic purple"><i class="ti ti-chart-bar"></i></div>
+        <h4>Analytics &amp; Reporting</h4>
+        <p>GA4 setup, performance dashboards, and monthly reports with actionable insights.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ic purple"><i class="ti ti-pencil"></i></div>
+        <h4>Content Marketing</h4>
+        <p>SEO-driven blog posts, social copy, and content strategies that attract and convert your audience.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Finance Services -->
+  <div id="tab-finance" class="svc-section">
+    <div class="svc-grid">
+      <div class="svc featured-teal">
+        <div class="popular-badge badge-teal">Core service</div>
+        <div class="svc-ic teal"><i class="ti ti-calculator"></i></div>
+        <h4>Bookkeeping &amp; Accounts</h4>
+        <p>Daily accounting entries, journal posting, ledger reconciliation, and accounts payable/receivable management using TallyPrime or SAP.</p>
+      </div>
+      <div class="svc teal">
+        <div class="svc-ic teal"><i class="ti ti-file-invoice"></i></div>
+        <h4>GST &amp; VAT Filing</h4>
+        <p>Accurate preparation and timely filing of GST returns and VAT documentation ensuring full statutory compliance.</p>
+      </div>
+      <div class="svc teal">
+        <div class="svc-ic teal"><i class="ti ti-report"></i></div>
+        <h4>Financial Reporting</h4>
+        <p>Outstanding reports, debtor/creditor follow-ups, and management reports using MS Excel with Pivot Tables and VLOOKUP.</p>
+      </div>
+      <div class="svc teal">
+        <div class="svc-ic teal"><i class="ti ti-package"></i></div>
+        <h4>Inventory Management</h4>
+        <p>Maintaining accurate inventory records, billing, and invoicing operations to ensure data integrity across systems.</p>
+      </div>
+      <div class="svc teal">
+        <div class="svc-ic teal"><i class="ti ti-building"></i></div>
+        <h4>SAP FICO</h4>
+        <p>Financial accounting and controlling module operations — GL, AP, AR, and cost centre management.</p>
+      </div>
+      <div class="svc teal">
+        <div class="svc-ic teal"><i class="ti ti-zoom-check"></i></div>
+        <h4>Accounts Reconciliation</h4>
+        <p>Bank reconciliation, ledger matching, and resolving discrepancies to maintain accurate financial records.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section class="section exp-bg" id="experience">
+  <div class="sec-eyebrow">Experience</div>
+  <div class="sec-title">Work history</div>
+  <div class="bar"></div>
+  <div class="timeline">
+
+    <!-- Current Job -->
+    <div class="exp-card exp-current">
+      <div class="exp-top">
+        <div>
+          <h4>Accounting &amp; Digital Marketing Trainer</h4>
+          <div class="company">Right Soft Options</div>
+        </div>
+        <span class="exp-date">Dec 2025 – Present</span>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem">
+        <span class="tag tag-teal" style="font-size:11px">Accounting</span>
+        <span class="tag tag-purple" style="font-size:11px">Digital Marketing</span>
+      </div>
+      <div class="two-col">
+        <div>
+          <p style="font-size:12px;font-weight:600;color:var(--teal);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:0.6rem">Accounting</p>
+          <ul class="exp-bullets teal-bullets">
+            <li>Maintained and updated daily accounting entries using TallyPrime and ERP software</li>
+            <li>Prepared and filed GST returns and related tax documentation accurately and on time</li>
+            <li>Handled journal entries, ledger posting, and account reconciliation</li>
+            <li>Generated outstanding reports and followed up with debtors and creditors</li>
+            <li>Managed billing, invoicing, and inventory records to ensure data accuracy</li>
+            <li>Created accounting reports using MS Excel (Pivot Tables, VLOOKUP, HLOOKUP)</li>
+          </ul>
+        </div>
+        <div>
+          <p style="font-size:12px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:0.6rem">Digital Marketing</p>
+          <ul class="exp-bullets">
+            <li>Executed SEO strategies (on-page and off-page) to improve website search rankings</li>
+            <li>Managed and grew social media presence on Facebook and Instagram</li>
+            <li>Tracked website performance and user behaviour using Google Analytics GA4</li>
+            <li>Conducted keyword research and optimised content for search engines</li>
+            <li>Supported Meta Ads and Google Ads campaigns for online advertising</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Previous Job -->
+    <div class="exp-card">
+      <div class="exp-top">
+        <div>
+          <h4>Accounts Assistant</h4>
+          <div class="company">Anish Associates Accounts Consultants</div>
+        </div>
+        <span class="exp-date teal-date">Aug 2023 – May 2024</span>
+      </div>
+      <div class="two-col">
+        <ul class="exp-bullets teal-bullets">
+          <li>Maintained daily accounting entries in Tally and ERP software</li>
+          <li>Assisted in preparation and filing of GST returns and statutory compliance</li>
+          <li>Recorded journal entries and managed ledger postings</li>
+        </ul>
+        <ul class="exp-bullets teal-bullets">
+          <li>Generated outstanding reports and coordinated with debtors and creditors</li>
+          <li>Supported inventory management, billing, and invoicing operations</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Education & Certifications -->
+<section class="section" id="qualifications">
+  <div class="sec-eyebrow">Qualifications</div>
+  <div class="sec-title">Education &amp; certifications</div>
+  <div class="bar"></div>
+  <div class="edu-grid">
+    <div class="edu-dark">
+      <div class="edu-icon" style="background:rgba(124,58,237,0.3);color:var(--accentmd)"><i class="ti ti-school"></i></div>
+      <div style="font-size:11px;color:var(--accentmd);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem">Degree</div>
+      <div style="font-size:17px;font-weight:600;margin-bottom:0.35rem">Bachelor of Commerce (B.Com)</div>
+      <div style="font-size:13px;color:#94a3b8">Calicut University &nbsp;·&nbsp; 2019 – 2022</div>
+    </div>
+    <div class="edu-light">
+      <div class="edu-icon" style="background:rgba(124,58,237,0.15);color:var(--accent)"><i class="ti ti-certificate"></i></div>
+      <div style="font-size:11px;color:var(--accent);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem">Certification</div>
+      <div style="font-size:17px;font-weight:600;color:var(--navy);margin-bottom:0.35rem">IAAP – International Association of Accounting Professionals</div>
+      <div style="font-size:13px;color:var(--muted)">Enbridge Institution &nbsp;·&nbsp; 2023</div>
+    </div>
+    <div class="edu-teal">
+      <div class="edu-icon" style="background:rgba(15,118,110,0.15);color:var(--teal)"><i class="ti ti-rosette"></i></div>
+      <div style="font-size:11px;color:var(--teal);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.4rem">Certification</div>
+      <div style="font-size:17px;font-weight:600;color:var(--navy);margin-bottom:0.35rem">Digital Marketing</div>
+      <div style="font-size:13px;color:var(--muted)">Right Soft Options, Kaloor &nbsp;·&nbsp; 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact" style="background:var(--light)">
+  <div class="sec-eyebrow">Get In Touch</div>
+  <div class="sec-title">Let's work together</div>
+  <div class="bar"></div>
+  <div class="contact-wrap">
+    <div class="contact-cards">
+      <div class="cc">
+        <div class="ccic"><i class="ti ti-phone"></i></div>
+        <div><div class="lbl">Phone / WhatsApp</div><div class="val">+91 79023 27214</div></div>
+      </div>
+      <div class="cc">
+        <div class="ccic"><i class="ti ti-mail"></i></div>
+        <div><div class="lbl">Email</div><div class="val">sonapremson@gmail.com</div></div>
+      </div>
+      <div class="cc">
+        <div class="ccic"><i class="ti ti-map-pin"></i></div>
+        <div><div class="lbl">Location</div><div class="val">Kerala, India</div></div>
+      </div>
+      <div class="cc">
+        <div class="ccic" style="background:#dcfce7;color:#16a34a"><i class="ti ti-circle-check"></i></div>
+        <div><div class="lbl">Availability</div><div class="val" style="color:#16a34a">Open to opportunities</div></div>
+      </div>
+    </div>
+    <div class="cform">
+      <div class="frow">
+        <div class="fg"><label>Name</label><input type="text" placeholder="Your name"></div>
+        <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+      </div>
+      <div class="fg">
+        <label>I'm looking for</label>
+        <select>
+          <option>Accounting & Bookkeeping</option>
+          <option>GST / VAT Filing</option>
+          <option>Financial Reporting</option>
+          <option>SEO Optimisation</option>
+          <option>Meta Ads Management</option>
+          <option>Google Ads</option>
+          <option>Social Media Marketing</option>
+          <option>Analytics & Reporting</option>
+          <option>Both Accounting + Marketing</option>
+        </select>
+      </div>
+      <div class="fg"><label>Message</label><textarea placeholder="Tell me about your project or requirement..."></textarea></div>
+      <button class="btn btn-primary" style="width:100%;padding:12px 20px;font-size:14px;justify-content:center">
+        <i class="ti ti-send"></i> Send Message
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p style="margin-bottom:6px">© 2026 Sona Premson &nbsp;·&nbsp; Accountant &amp; Digital Marketing Executive &nbsp;·&nbsp; <a href="mailto:sonapremson@gmail.com">sonapremson@gmail.com</a></p>
+  <p style="font-size:12px">Kerala, India &nbsp;·&nbsp; Available for freelance &amp; full-time roles</p>
+</footer>
+
+<script>
+function showTab(tab, btn, activeClass) {
+  document.querySelectorAll('.svc-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.svc-tab').forEach(b => { b.classList.remove('active-marketing','active-finance'); });
+  document.getElementById('tab-' + tab).classList.add('active');
+  btn.classList.add(activeClass);
+}
+</script>
+</body>
+</html>
